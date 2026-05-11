@@ -6,7 +6,7 @@
 <title>EMEA Event Attribution — QBR Q2 2026</title>
 <style>
 * { box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 1280px; margin: 0 auto; padding: 24px; background: #f7f8fa; color: #1a1d2e; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background: #f7f8fa; color: #1a1d2e; }
 h1 { font-size: 24px; margin: 0 0 4px; }
 h2 { font-size: 20px; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 2px solid #1a1d2e; }
 h3 { font-size: 16px; margin: 0; display: inline; }
@@ -52,42 +52,53 @@ h3 { font-size: 16px; margin: 0; display: inline; }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
 .dot.g { background: #047857; } .dot.a { background: #b45309; } .dot.r { background: #b91c1c; }
 
-.nav { display: flex; gap: 6px; margin: 0 0 16px; flex-wrap: wrap; }
-.nav a, .nav span.active { display: inline-block; padding: 7px 12px; font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 5px; border: 1px solid #e1e4eb; background: #fff; color: #1a1d2e; transition: all 0.15s; letter-spacing: 0.02em; }
-.nav a:hover { background: #f0f5ff; border-color: #3b82f6; color: #1e40af; }
-.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; }
-.nav .sep { color: #c0c4d0; padding: 7px 0; font-size: 12px; }
+/* === Top nav bar === */
+.topbar { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e1e4eb; padding: 14px 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); }
+.topbar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1a1d2e 0%, #1e40af 50%, #3b82f6 100%); }
+.nav { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; align-items: center; max-width: 1280px; margin: 0 auto; }
+.nav a, .nav span.active { display: inline-block; padding: 9px 18px; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; border: 1px solid transparent; color: #66708a; letter-spacing: 0.02em; transition: all 0.18s ease; line-height: 1.2; }
+.nav a:hover { background: #eff4fe; color: #1e40af; border-color: #c7d7f5; }
+.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; box-shadow: 0 2px 6px rgba(26, 29, 46, 0.2); }
+.nav .sep { display: inline-block; width: 1px; height: 22px; background: #d6dae5; margin: 0 8px; font-size: 0; color: transparent; align-self: center; }
+/* === Polish === */
+.card { transition: box-shadow 0.18s ease, transform 0.18s ease; }
+.card:hover { box-shadow: 0 4px 12px rgba(26, 29, 46, 0.08); transform: translateY(-1px); }
+h1 { letter-spacing: -0.01em; }
+.subtitle { letter-spacing: 0.01em; }
+.evt-container { max-width: 1280px; margin: 0 auto; padding: 24px; }
 
 </style></head>
 <body>
-<div class="nav"><a href="emea-scorecard-q2-2026.html">EMEA Pipeline</a><span class="active">EMEA Events</span><span class="sep">·</span><a href="americas-scorecard-q2-2026.html">AMERICAS Pipeline</a><a href="event-attribution-americas-q2-2026.html">AMERICAS Events</a></div>
+<header class="topbar"><div class="nav"><a href="index.html">EMEA Pipeline</a><span class="active">EMEA Event Coverage</span><span class="sep"></span><a href="americas-scorecard.html">AMERICAS Pipeline</a><a href="nam-events-attribution.html">AMERICAS Event Coverage</a></div></header>
+<div class="evt-container">
 <h1>EMEA Event Attribution Scorecard</h1>
-<p class="subtitle">Doctors from 2024+ Events campaigns vs. opportunity outcomes — full data, 2,234 doctors across EMEA AE+SM books</p>
+<p class="subtitle">Doctors from 2024+ Events campaigns vs. opportunity outcomes — full data, 2,229 doctors across EMEA AE+SM books</p>
 
-<div class="tldr"><strong>Headline:</strong> EMEA's event attendance averages <strong>45%</strong>, ahead of AMERICAS' 32%. Invite reach is healthy at 80% — the lever is driving registration → attendance, owned by sellers. FRABEL and Nordnet are the lagging areas.</div>
+<div class="tldr"><strong>Headline:</strong> Doctors who attended events close at <strong>1.9× the rate</strong> of doctors who didn't (42% vs 22% win rate on closed deals). The dose curve is steep — every additional event meaningfully boosts win probability, with 6+ events lifting win rate to 80%. EMEA invite reach is healthy at 79%; the lever is driving registration → attendance, owned by sellers. FRABEL and Nordnet are the lagging areas.</div>
 
 <div class="topline">
-  <div class="tl-stat"><div class="num">2,234</div><div class="lab">Unique doctors in EMEA scope</div></div>
-  <div class="tl-stat"><div class="num">80%</div><div class="lab">Invited to ≥1 Events campaign</div></div>
-  <div class="tl-stat"><div class="num">45%</div><div class="lab">Responded (registered/attended)</div></div>
-  <div class="tl-stat"><div class="num">1.9×</div><div class="lab">Won vs Lost attendance gap (global)</div></div>
+  <div class="tl-stat"><div class="num">1.9×</div><div class="lab">Win rate lift: attendee vs non-attendee (EMEA closed deals)</div></div>
+  <div class="tl-stat"><div class="num">42% <span style="opacity:0.5;">vs</span> 22%</div><div class="lab">Win rate when doctor attended ≥1 event vs none</div></div>
+  <div class="tl-stat"><div class="num">3.6×</div><div class="lab">Top dose: doctors attending 6+ events close at 80%</div></div>
+  <div class="tl-stat"><div class="num">79% <span style="opacity:0.5;">/</span> 42%</div><div class="lab">EMEA reach: invited / attended (2,229 doctors)</div></div>
 </div>
 
-<div class="cohort-block"><strong>Event attendance vs deal outcome — global pattern</strong>
+<div class="cohort-block"><strong>EMEA — Win rate by number of events the doctor attended (closed deals)</strong>
 <table>
-<thead><tr><th>Cohort</th><th class="num">Unique doctors</th><th class="num">Invited</th><th class="num">Attended</th></tr></thead>
+<thead><tr><th>Events attended</th><th class="num">Closed opps</th><th class="num">Won</th><th class="num">Win rate</th><th class="num">vs 0 events</th></tr></thead>
 <tbody>
-<tr class="won"><td>Won deals</td><td class="num">582</td><td class="num">88%</td><td class="num">62%</td></tr>
-<tr><td>All opps</td><td class="num">3,709</td><td class="num">82%</td><td class="num">40%</td></tr>
-<tr class="open"><td>Open pipe</td><td class="num">1,693</td><td class="num">79%</td><td class="num">41%</td></tr>
-<tr class="lost"><td>Lost deals</td><td class="num">1,566</td><td class="num">83%</td><td class="num">33%</td></tr>
+<tr><td>0 (baseline)</td><td class="num">809</td><td class="num">181</td><td class="num">22%</td><td class="num">1.00×</td></tr>
+<tr><td>1</td><td class="num">327</td><td class="num">95</td><td class="num">29%</td><td class="num">1.30×</td></tr>
+<tr><td>2</td><td class="num">131</td><td class="num">67</td><td class="num">51%</td><td class="num">2.29×</td></tr>
+<tr><td>3-5</td><td class="num">118</td><td class="num">75</td><td class="num">64%</td><td class="num">2.84×</td></tr>
+<tr class="won"><td>6+</td><td class="num">15</td><td class="num">12</td><td class="num">80%</td><td class="num">3.58×</td></tr>
 </tbody>
 </table>
+<p style="margin-top:8px;font-size:13px;color:#555;">EMEA cohort breakdown — % of unique doctors who attended ≥1 event: <strong>Won deals 56%</strong> · Open pipe 46% · <strong>Lost deals 35%</strong>. Attended doctors over-index in wins by 21 percentage points.</p>
 </div>
-
 <div class="legend">Tenure: <span><span class="dot g"></span>2+ yrs</span><span><span class="dot a"></span>1-2 yrs</span><span><span class="dot r"></span>&lt;1 yr</span>  Attended%: <span><span class="dot g"></span>≥60%</span><span><span class="dot a"></span>35-59%</span><span><span class="dot r"></span>&lt;35%</span>  Arrow vs sales-area avg.</div>
 
-<h2>EMEA — 45% avg attended (2,234 doctors)</h2>
+<h2>EMEA — 42% avg attended (2,229 doctors)</h2>
 <div class="region-head"><h3>DACH</h3><span class="ct">6 sellers</span><span class="avg">63% avg attended</span></div>
 <div class="cards"><div class="card">
       <p class="name">Maximilian Rother</p><p class="role">AE · DACH <span class="tenure tn-vet">49.7 mo</span></p>
@@ -353,4 +364,5 @@ h3 { font-size: 16px; margin: 0; display: inline; }
 <p style="margin: 0;"><strong>4. Turkey is distributor-driven.</strong> Direct end-doctor attendance may not be the right KPI — consider tracking distributor rep attendance instead.</p>
 </div>
 
+</div>
 </body></html>
