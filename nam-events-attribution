@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMERICAS Event Attribution — QBR Q2 2026</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 1280px; margin: 0 auto; padding: 24px; background: #f7f8fa; color: #1a1d2e; }
+h1 { font-size: 24px; margin: 0 0 4px; }
+h2 { font-size: 20px; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 2px solid #1a1d2e; }
+h3 { font-size: 16px; margin: 0; display: inline; }
+.subtitle { color: #66708a; font-size: 14px; margin: 0 0 16px; }
+.tldr { background: #fff5e1; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 12px 0 24px; border-radius: 4px; font-size: 14px; line-height: 1.5; }
+.topline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 24px; }
+.tl-stat { background: #fff; border: 1px solid #e1e4eb; border-radius: 6px; padding: 12px; }
+.tl-stat .num { font-size: 22px; font-weight: 600; color: #1a1d2e; }
+.tl-stat .lab { font-size: 11px; color: #66708a; text-transform: uppercase; letter-spacing: 0.04em; }
+.cohort-block { background: #fff; border: 1px solid #e1e4eb; border-radius: 8px; padding: 14px 16px; margin: 12px 0 20px; }
+.cohort-block table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+.cohort-block th, .cohort-block td { padding: 6px 10px; text-align: left; border-bottom: 1px solid #f0f2f6; }
+.cohort-block th { background: #f7f8fa; font-weight: 600; font-size: 12px; color: #66708a; text-transform: uppercase; letter-spacing: 0.03em; }
+.cohort-block td.num { font-variant-numeric: tabular-nums; text-align: right; }
+.cohort-block tr.won td { background: #ecfdf5; font-weight: 600; }
+.cohort-block tr.lost td { background: #fef2f2; }
+.cohort-block tr.open td { background: #eff6ff; }
+.region-head { display: flex; align-items: baseline; gap: 12px; margin: 20px 0 6px; padding-top: 8px; }
+.region-head .ct, .region-head .avg { font-size: 12px; color: #66708a; }
+.region-head .avg { font-weight: 600; color: #1a1d2e; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.card { background: #fff; border: 1px solid #e1e4eb; border-radius: 6px; padding: 10px 12px; }
+.card.empty { opacity: 0.6; }
+.card .name { font-size: 14px; font-weight: 600; margin: 0; }
+.card .role { font-size: 11px; color: #66708a; margin: 2px 0 8px; display: flex; gap: 6px; align-items: center; }
+.tenure { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; }
+.tn-vet { background: #e5e7eb; color: #1a1d2e; }
+.tn-onetwo { background: #dbeafe; color: #1e40af; }
+.tn-year { background: #fef3c7; color: #92400e; }
+.tn-ramp { background: #fee2e2; color: #991b1b; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.stats > div { display: flex; flex-direction: column; }
+.stats .v { font-size: 14px; font-weight: 600; }
+.stats .l { font-size: 10px; color: #66708a; }
+.v.green { color: #047857; }
+.v.amber { color: #b45309; }
+.v.red { color: #b91c1c; }
+.arr-up { color: #047857; font-size: 11px; margin-left: 4px; }
+.arr-down { color: #b91c1c; font-size: 11px; margin-left: 4px; }
+.guidance { background: #f0f5ff; border-left: 3px solid #3b82f6; padding: 10px 14px; margin: 10px 0 16px; font-size: 13px; line-height: 1.5; }
+.legend { font-size: 11px; color: #66708a; margin: 8px 0 12px; }
+.legend span { display: inline-block; margin-right: 12px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
+.dot.g { background: #047857; } .dot.a { background: #b45309; } .dot.r { background: #b91c1c; }
+
+.nav { display: flex; gap: 6px; margin: 0 0 16px; flex-wrap: wrap; }
+.nav a, .nav span.active { display: inline-block; padding: 7px 12px; font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 5px; border: 1px solid #e1e4eb; background: #fff; color: #1a1d2e; transition: all 0.15s; letter-spacing: 0.02em; }
+.nav a:hover { background: #f0f5ff; border-color: #3b82f6; color: #1e40af; }
+.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; }
+.nav .sep { color: #c0c4d0; padding: 7px 0; font-size: 12px; }
+
+</style></head>
+<body>
+<div class="nav"><a href="emea-scorecard-q2-2026.html">EMEA Pipeline</a><a href="event-attribution-emea-q2-2026.html">EMEA Events</a><span class="sep">·</span><a href="americas-scorecard-q2-2026.html">AMERICAS Pipeline</a><span class="active">AMERICAS Events</span></div>
+<h1>AMERICAS Event Attribution Scorecard</h1>
+<p class="subtitle">Doctors from 2024+ Events campaigns vs. opportunity outcomes — full data, 1,458 doctors across AMERICAS AE+SM books</p>
+
+<div class="tldr"><strong>Headline:</strong> AMERICAS event attendance averages just <strong>32%</strong> — 13pt behind EMEA's 45%, despite higher invite reach (84% vs 80%). This is a coaching gap, not a marketing gap. West (29%) is the weakest sales area.</div>
+
+<div class="topline">
+  <div class="tl-stat"><div class="num">1,458</div><div class="lab">Unique doctors in AMERICAS scope</div></div>
+  <div class="tl-stat"><div class="num">84%</div><div class="lab">Invited to ≥1 Events campaign</div></div>
+  <div class="tl-stat"><div class="num">32%</div><div class="lab">Responded (registered/attended)</div></div>
+  <div class="tl-stat"><div class="num">1.9×</div><div class="lab">Won vs Lost attendance gap (global)</div></div>
+</div>
+
+<div class="cohort-block"><strong>Event attendance vs deal outcome — global pattern</strong>
+<table>
+<thead><tr><th>Cohort</th><th class="num">Unique doctors</th><th class="num">Invited</th><th class="num">Attended</th></tr></thead>
+<tbody>
+<tr class="won"><td>Won deals</td><td class="num">582</td><td class="num">88%</td><td class="num">62%</td></tr>
+<tr><td>All opps</td><td class="num">3,709</td><td class="num">82%</td><td class="num">40%</td></tr>
+<tr class="open"><td>Open pipe</td><td class="num">1,693</td><td class="num">79%</td><td class="num">41%</td></tr>
+<tr class="lost"><td>Lost deals</td><td class="num">1,566</td><td class="num">83%</td><td class="num">33%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="legend">Tenure: <span><span class="dot g"></span>2+ yrs</span><span><span class="dot a"></span>1-2 yrs</span><span><span class="dot r"></span>&lt;1 yr</span>  Attended%: <span><span class="dot g"></span>≥60%</span><span><span class="dot a"></span>35-59%</span><span><span class="dot r"></span>&lt;35%</span>  Arrow vs sales-area avg.</div>
+
+<h2>AMERICAS — 32% avg attended (1,458 doctors)</h2>
+<div class="region-head"><h3>East</h3><span class="ct">8 sellers</span><span class="avg">35% avg attended</span></div>
+<div class="cards"><div class="card">
+      <p class="name">Christina Reed</p><p class="role">AE · East <span class="tenure tn-vet">52.1 mo</span></p>
+      <div class="stats">
+        <div><span class="v">58</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">54 (93%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">34 (59%)<span class="arr-up">▲</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Virginia Humphries</p><p class="role">AE · East <span class="tenure tn-onetwo">23.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">85</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">75 (88%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">42 (49%)<span class="arr-up">▲</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Matthew Miller</p><p class="role">Sales Manager · America East <span class="tenure tn-vet">61.3 mo</span></p>
+      <div class="stats">
+        <div><span class="v">57</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">49 (86%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">21 (37%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Tracy McFarlin</p><p class="role">AE · East <span class="tenure tn-vet">61.3 mo</span></p>
+      <div class="stats">
+        <div><span class="v">35</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">28 (80%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">12 (34%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Megan Gillette</p><p class="role">AE · East <span class="tenure tn-onetwo">21.4 mo</span></p>
+      <div class="stats">
+        <div><span class="v">70</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">64 (91%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">24 (34%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">James Delaney</p><p class="role">AE · East <span class="tenure tn-ramp">2.1 mo</span></p>
+      <div class="stats">
+        <div><span class="v">21</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">17 (81%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">6 (29%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Michelle Mort</p><p class="role">AE · East <span class="tenure tn-onetwo">12.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">53</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">44 (83%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">8 (15%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Jim BLAZEWICZ</p><p class="role">AE · East <span class="tenure tn-onetwo">13.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">62</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">51 (82%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">9 (15%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+</div>
+<div class="guidance"><strong>Sales Excellence:</strong> 35% attended is below EMEA's 45%. Reed (59%) and Humphries (49%) show what's possible. Miller as SM inherits departed-rep books — his 37% reflects mixed inheritance. Mort (15%) and Blazewicz (15%) need direct coaching on event follow-up — invites are landing but attendance isn't.</div>
+<div class="region-head"><h3>Central</h3><span class="ct">5 sellers</span><span class="avg">32% avg attended</span></div>
+<div class="cards"><div class="card">
+      <p class="name">Stacey Wallis</p><p class="role">AE · Central <span class="tenure tn-vet">56.3 mo</span></p>
+      <div class="stats">
+        <div><span class="v">83</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">78 (94%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">45 (54%)<span class="arr-up">▲</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Sommer Bridgman</p><p class="role">AE · Central <span class="tenure tn-vet">58.6 mo</span></p>
+      <div class="stats">
+        <div><span class="v">108</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">98 (91%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">34 (31%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Teresa Kaliciak</p><p class="role">AE · Central <span class="tenure tn-vet">51.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">133</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">113 (85%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">41 (31%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Joel Grifka</p><p class="role">AE · Central <span class="tenure tn-vet">39.9 mo</span></p>
+      <div class="stats">
+        <div><span class="v">109</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">87 (80%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">27 (25%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Jason Jennings</p><p class="role">Sales Manager · America Central <span class="tenure tn-vet">61.3 mo</span></p>
+      <div class="stats">
+        <div><span class="v">65</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">53 (82%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">14 (22%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+</div>
+<div class="guidance"><strong>Sales Excellence:</strong> 32% attended. Wallis (54%) is the bright spot. Bridgman and Kaliciak both at ~31% despite 4+ years tenure — this is a coaching gap, not a tenure issue. Jennings as SM only 22% attended.</div>
+<div class="region-head"><h3>West</h3><span class="ct">7 sellers</span><span class="avg">29% avg attended</span></div>
+<div class="cards"><div class="card">
+      <p class="name">Paul Wood</p><p class="role">AE · West <span class="tenure tn-vet">39.9 mo</span></p>
+      <div class="stats">
+        <div><span class="v">76</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">72 (95%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">35 (46%)<span class="arr-up">▲</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Liam Caffrey</p><p class="role">AE · West <span class="tenure tn-ramp">3.2 mo</span></p>
+      <div class="stats">
+        <div><span class="v">55</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">39 (71%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v amber">20 (36%)<span class="arr-up">▲</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Neil Vacchiano</p><p class="role">AE · West <span class="tenure tn-vet">47.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">100</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">65 (65%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">30 (30%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Bryan Lewis</p><p class="role">AE · West <span class="tenure tn-ramp">4.7 mo</span></p>
+      <div class="stats">
+        <div><span class="v">60</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">54 (90%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">17 (28%)</span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Greg Pellegrom</p><p class="role">Sales Manager · America West <span class="tenure tn-year">7.3 mo</span></p>
+      <div class="stats">
+        <div><span class="v">4</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">3 (75%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">1 (25%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Sebastian Ayllon</p><p class="role">AE · West <span class="tenure tn-ramp">2.0 mo</span></p>
+      <div class="stats">
+        <div><span class="v">56</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">43 (77%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">12 (21%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+<div class="card">
+      <p class="name">Damani Portin</p><p class="role">AE · West <span class="tenure tn-onetwo">23.2 mo</span></p>
+      <div class="stats">
+        <div><span class="v">168</span><span class="l">Unique doctors</span></div>
+        <div><span class="v">136 (81%)</span><span class="l">Invited to events</span></div>
+        <div><span class="v red">33 (20%)<span class="arr-down">▼</span></span><span class="l">Attended events</span></div>
+      </div>
+    </div>
+</div>
+<div class="guidance"><strong>Sales Excellence:</strong> Worst region for attendance (29%) and invite reach (79%). Wood (46%) leading. The newer reps (Lewis, Caffrey, Ayllon) are still ramping. Vacchiano at 47 months tenure / 30% attended needs a refresh on event motion.</div>
+
+
+
+
+<h2>AMERICAS RevOps takeaways</h2>
+<div class="cohort-block">
+<p style="margin: 0 0 8px;"><strong>1. AMERICAS is 13pts behind EMEA despite higher invite reach.</strong> 84% invited vs 80% in EMEA, but only 32% attended vs EMEA's 45%. Marketing is reaching doctors — sellers aren't converting registrations to attendance.</p>
+<p style="margin: 0 0 8px;"><strong>2. Mort (15%) and Blazewicz (15%) — direct coaching opportunity.</strong> 80%+ invite rate but &lt;15% attendance. Their doctors are getting invited but not showing up. Specific Sales Excellence action.</p>
+<p style="margin: 0 0 8px;"><strong>3. Tenure doesn't explain low attendance.</strong> Bridgman (58 months, 31%), Kaliciak (51 months, 31%), Vacchiano (47 months, 30%) — all veterans with weak attendance. This is a skills gap, not a ramp issue.</p>
+<p style="margin: 0;"><strong>4. West is the weakest sales area (29% attended, 79% invite reach).</strong> Lowest invite rate AND lowest attendance in AMERICAS. Compounding problem — marketing AND seller motion both need attention.</p>
+</div>
+
+</body></html>
