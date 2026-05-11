@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function() {
+  // One-time auto-redirect to AMERICAS scorecard for North American visitors.
+  // Skips if: (a) already redirected this session, or (b) URL has ?stay=emea (explicit EMEA visit).
+  try {
+    if (sessionStorage.getItem('autoRedirected') === 'true') return;
+    if (location.search.indexOf('stay=emea') !== -1) {
+      sessionStorage.setItem('autoRedirected', 'true');
+      return;
+    }
+    sessionStorage.setItem('autoRedirected', 'true');
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    var naZones = {
+      // US (including Alaska, Hawaii, territories)
+      'America/New_York':1,'America/Detroit':1,'America/Indianapolis':1,'America/Indiana/Indianapolis':1,
+      'America/Chicago':1,'America/Denver':1,'America/Phoenix':1,'America/Los_Angeles':1,
+      'America/Anchorage':1,'America/Adak':1,'America/Boise':1,'America/Juneau':1,'America/Sitka':1,
+      'America/Yakutat':1,'America/Nome':1,'America/Metlakatla':1,'America/Menominee':1,
+      'America/Kentucky/Louisville':1,'America/Kentucky/Monticello':1,
+      'America/Indiana/Knox':1,'America/Indiana/Marengo':1,'America/Indiana/Petersburg':1,
+      'America/Indiana/Tell_City':1,'America/Indiana/Vevay':1,'America/Indiana/Vincennes':1,
+      'America/Indiana/Winamac':1,'America/North_Dakota/Beulah':1,'America/North_Dakota/Center':1,
+      'America/North_Dakota/New_Salem':1,'Pacific/Honolulu':1,'America/Puerto_Rico':1,
+      // Canada
+      'America/Toronto':1,'America/Halifax':1,'America/Edmonton':1,'America/Winnipeg':1,
+      'America/Vancouver':1,'America/St_Johns':1,'America/Whitehorse':1,'America/Yellowknife':1,
+      'America/Regina':1,'America/Iqaluit':1,'America/Goose_Bay':1,'America/Glace_Bay':1,
+      'America/Moncton':1,'America/Thunder_Bay':1,'America/Atikokan':1,'America/Resolute':1,
+      'America/Rankin_Inlet':1,'America/Cambridge_Bay':1,'America/Inuvik':1,'America/Dawson':1,
+      'America/Dawson_Creek':1,'America/Fort_Nelson':1,'America/Creston':1,'America/Blanc-Sablon':1,
+      'America/Swift_Current':1,'America/Pangnirtung':1,
+      // Mexico
+      'America/Mexico_City':1,'America/Cancun':1,'America/Tijuana':1,'America/Monterrey':1,
+      'America/Chihuahua':1,'America/Hermosillo':1,'America/Mazatlan':1,'America/Merida':1,
+      'America/Bahia_Banderas':1,'America/Matamoros':1,'America/Ojinaga':1
+    };
+    if (naZones[tz]) {
+      window.location.replace('americas-scorecard');
+    }
+  } catch(e) { /* fail silent */ }
+})();
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EMEA Pipeline Scorecard — QBR Q2 2026</title>
@@ -82,15 +125,24 @@
     .region { break-inside: avoid; }
   }
 
-.nav { display: flex; gap: 6px; margin: 0 0 16px; flex-wrap: wrap; }
-.nav a, .nav span.active { display: inline-block; padding: 7px 12px; font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 5px; border: 1px solid #e1e4eb; background: #fff; color: #1a1d2e; transition: all 0.15s; letter-spacing: 0.02em; }
-.nav a:hover { background: #f0f5ff; border-color: #3b82f6; color: #1e40af; }
-.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; }
-.nav .sep { color: #c0c4d0; padding: 7px 0; font-size: 12px; }
+/* === Top nav bar === */
+.topbar { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e1e4eb; padding: 14px 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); }
+.topbar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1a1d2e 0%, #1e40af 50%, #3b82f6 100%); }
+.nav { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; align-items: center; max-width: 1280px; margin: 0 auto; }
+.nav a, .nav span.active { display: inline-block; padding: 9px 18px; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; border: 1px solid transparent; color: #66708a; letter-spacing: 0.02em; transition: all 0.18s ease; line-height: 1.2; }
+.nav a:hover { background: #eff4fe; color: #1e40af; border-color: #c7d7f5; }
+.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; box-shadow: 0 2px 6px rgba(26, 29, 46, 0.2); }
+.nav .sep { display: inline-block; width: 1px; height: 22px; background: #d6dae5; margin: 0 8px; font-size: 0; color: transparent; align-self: center; }
+/* === Polish === */
+.card { transition: box-shadow 0.18s ease, transform 0.18s ease; }
+.card:hover { box-shadow: 0 4px 12px rgba(26, 29, 46, 0.08); transform: translateY(-1px); }
+h1 { letter-spacing: -0.01em; }
+.subtitle { letter-spacing: 0.01em; }
+.evt-container { max-width: 1280px; margin: 0 auto; padding: 24px; }
 </style>
 </head>
 <body>
-<div class="nav"><span class="active">EMEA Pipeline</span><a href="event-attribution-emea-q2-2026.html">EMEA Events</a><span class="sep">·</span><a href="americas-scorecard-q2-2026.html">AMERICAS Pipeline</a><a href="event-attribution-americas-q2-2026.html">AMERICAS Events</a></div>
+<header class="topbar"><div class="nav"><span class="active">EMEA Pipeline</span><a href="event-attribution">EMEA Events</a><span class="sep"></span><a href="americas-scorecard">AMERICAS Pipeline</a><a href="nam-events-attribution">AMERICAS Events</a></div></header>
 <div class="container">
 
 <h1>EMEA AE &amp; SM Pipeline Scorecard<span class="sub">QBR Q2 2026 · Cory Lawing, Revenue Operations · Data as of May 11, 2026 · Acquisition = New Practice + Reactivate Practice</span></h1>
