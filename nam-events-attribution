@@ -6,7 +6,7 @@
 <title>AMERICAS Event Attribution — QBR Q2 2026</title>
 <style>
 * { box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 1280px; margin: 0 auto; padding: 24px; background: #f7f8fa; color: #1a1d2e; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; background: #f7f8fa; color: #1a1d2e; }
 h1 { font-size: 24px; margin: 0 0 4px; }
 h2 { font-size: 20px; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 2px solid #1a1d2e; }
 h3 { font-size: 16px; margin: 0; display: inline; }
@@ -52,39 +52,50 @@ h3 { font-size: 16px; margin: 0; display: inline; }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
 .dot.g { background: #047857; } .dot.a { background: #b45309; } .dot.r { background: #b91c1c; }
 
-.nav { display: flex; gap: 6px; margin: 0 0 16px; flex-wrap: wrap; }
-.nav a, .nav span.active { display: inline-block; padding: 7px 12px; font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 5px; border: 1px solid #e1e4eb; background: #fff; color: #1a1d2e; transition: all 0.15s; letter-spacing: 0.02em; }
-.nav a:hover { background: #f0f5ff; border-color: #3b82f6; color: #1e40af; }
-.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; }
-.nav .sep { color: #c0c4d0; padding: 7px 0; font-size: 12px; }
+/* === Top nav bar === */
+.topbar { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e1e4eb; padding: 14px 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); }
+.topbar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1a1d2e 0%, #1e40af 50%, #3b82f6 100%); }
+.nav { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; align-items: center; max-width: 1280px; margin: 0 auto; }
+.nav a, .nav span.active { display: inline-block; padding: 9px 18px; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; border: 1px solid transparent; color: #66708a; letter-spacing: 0.02em; transition: all 0.18s ease; line-height: 1.2; }
+.nav a:hover { background: #eff4fe; color: #1e40af; border-color: #c7d7f5; }
+.nav span.active { background: #1a1d2e; color: #fff; border-color: #1a1d2e; cursor: default; box-shadow: 0 2px 6px rgba(26, 29, 46, 0.2); }
+.nav .sep { display: inline-block; width: 1px; height: 22px; background: #d6dae5; margin: 0 8px; font-size: 0; color: transparent; align-self: center; }
+/* === Polish === */
+.card { transition: box-shadow 0.18s ease, transform 0.18s ease; }
+.card:hover { box-shadow: 0 4px 12px rgba(26, 29, 46, 0.08); transform: translateY(-1px); }
+h1 { letter-spacing: -0.01em; }
+.subtitle { letter-spacing: 0.01em; }
+.evt-container { max-width: 1280px; margin: 0 auto; padding: 24px; }
 
 </style></head>
 <body>
-<div class="nav"><a href="emea-scorecard-q2-2026.html">EMEA Pipeline</a><a href="event-attribution-emea-q2-2026.html">EMEA Events</a><span class="sep">·</span><a href="americas-scorecard-q2-2026.html">AMERICAS Pipeline</a><span class="active">AMERICAS Events</span></div>
+<header class="topbar"><div class="nav"><a href="index.html">EMEA Pipeline</a><a href="event-attribution.html">EMEA Event Coverage</a><span class="sep"></span><a href="americas-scorecard.html">AMERICAS Pipeline</a><span class="active">AMERICAS Event Coverage</span></div></header>
+<div class="evt-container">
 <h1>AMERICAS Event Attribution Scorecard</h1>
 <p class="subtitle">Doctors from 2024+ Events campaigns vs. opportunity outcomes — full data, 1,458 doctors across AMERICAS AE+SM books</p>
 
-<div class="tldr"><strong>Headline:</strong> AMERICAS event attendance averages just <strong>32%</strong> — 13pt behind EMEA's 45%, despite higher invite reach (84% vs 80%). This is a coaching gap, not a marketing gap. West (29%) is the weakest sales area.</div>
+<div class="tldr"><strong>Headline:</strong> Doctors who attended events close at <strong>3.3× the rate</strong> of doctors who didn't (46% vs 14% win rate on closed deals). The dose curve is even steeper than EMEA — peak win rate hits 64% at 3-5 events. AMERICAS' attendance baseline is just 32% (vs EMEA's 42%), making this the biggest unlocked upside in the org. East-region invite coverage is the lagging metric.</div>
 
 <div class="topline">
-  <div class="tl-stat"><div class="num">1,458</div><div class="lab">Unique doctors in AMERICAS scope</div></div>
-  <div class="tl-stat"><div class="num">84%</div><div class="lab">Invited to ≥1 Events campaign</div></div>
-  <div class="tl-stat"><div class="num">32%</div><div class="lab">Responded (registered/attended)</div></div>
-  <div class="tl-stat"><div class="num">1.9×</div><div class="lab">Won vs Lost attendance gap (global)</div></div>
+  <div class="tl-stat"><div class="num">3.3×</div><div class="lab">Win rate lift: attendee vs non-attendee (AMERICAS closed deals)</div></div>
+  <div class="tl-stat"><div class="num">46% <span style="opacity:0.5;">vs</span> 14%</div><div class="lab">Win rate when doctor attended ≥1 event vs none</div></div>
+  <div class="tl-stat"><div class="num">4.6×</div><div class="lab">Top dose: doctors attending 3-5 events close at 64%</div></div>
+  <div class="tl-stat"><div class="num">84% <span style="opacity:0.5;">/</span> 32%</div><div class="lab">AMERICAS reach: invited / attended (1,453 doctors)</div></div>
 </div>
 
-<div class="cohort-block"><strong>Event attendance vs deal outcome — global pattern</strong>
+<div class="cohort-block"><strong>AMERICAS — Win rate by number of events the doctor attended (closed deals)</strong>
 <table>
-<thead><tr><th>Cohort</th><th class="num">Unique doctors</th><th class="num">Invited</th><th class="num">Attended</th></tr></thead>
+<thead><tr><th>Events attended</th><th class="num">Closed opps</th><th class="num">Won</th><th class="num">Win rate</th><th class="num">vs 0 events</th></tr></thead>
 <tbody>
-<tr class="won"><td>Won deals</td><td class="num">582</td><td class="num">88%</td><td class="num">62%</td></tr>
-<tr><td>All opps</td><td class="num">3,709</td><td class="num">82%</td><td class="num">40%</td></tr>
-<tr class="open"><td>Open pipe</td><td class="num">1,693</td><td class="num">79%</td><td class="num">41%</td></tr>
-<tr class="lost"><td>Lost deals</td><td class="num">1,566</td><td class="num">83%</td><td class="num">33%</td></tr>
+<tr><td>0 (baseline)</td><td class="num">554</td><td class="num">77</td><td class="num">14%</td><td class="num">1.00×</td></tr>
+<tr><td>1</td><td class="num">167</td><td class="num">58</td><td class="num">35%</td><td class="num">2.50×</td></tr>
+<tr><td>2</td><td class="num">65</td><td class="num">33</td><td class="num">51%</td><td class="num">3.65×</td></tr>
+<tr class="won"><td>3-5</td><td class="num">83</td><td class="num">53</td><td class="num">64%</td><td class="num">4.59×</td></tr>
+<tr><td>6+</td><td class="num">25</td><td class="num">13</td><td class="num">52%</td><td class="num">3.74×</td></tr>
 </tbody>
 </table>
+<p style="margin-top:8px;font-size:13px;color:#555;">AMERICAS cohort breakdown — % of unique doctors who attended ≥1 event: <strong>Won deals 64%</strong> · Open pipe 32% · <strong>Lost deals 24%</strong>. Attended doctors over-index in wins by 40 percentage points — the strongest signal in the dataset.</p>
 </div>
-
 <div class="legend">Tenure: <span><span class="dot g"></span>2+ yrs</span><span><span class="dot a"></span>1-2 yrs</span><span><span class="dot r"></span>&lt;1 yr</span>  Attended%: <span><span class="dot g"></span>≥60%</span><span><span class="dot a"></span>35-59%</span><span><span class="dot r"></span>&lt;35%</span>  Arrow vs sales-area avg.</div>
 
 <h2>AMERICAS — 32% avg attended (1,458 doctors)</h2>
@@ -269,4 +280,5 @@ h3 { font-size: 16px; margin: 0; display: inline; }
 <p style="margin: 0;"><strong>4. West is the weakest sales area (29% attended, 79% invite reach).</strong> Lowest invite rate AND lowest attendance in AMERICAS. Compounding problem — marketing AND seller motion both need attention.</p>
 </div>
 
+</div>
 </body></html>
